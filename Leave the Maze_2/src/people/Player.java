@@ -5,37 +5,37 @@ public class Player {
 	private  int positionX;
 	private  int positionY;
 	
-	public Player(int positionX, int positionY)
+	public Player(int positionY, int positionX)
 	{
 		this.positionX = positionX;
 		this.positionY = positionY;
 	}
 
-	//sets x-coordinate
+	//sets y-coordinate
 	public void setX(int x)
 	{
 		this.positionX = x;
 		
 	}
 	
-	//sets y-coordinate
+	//sets x-coordinate
 	public void setY(int y)
 	{
 		this.positionY = y;
 		
 	}
 	
-	//gets x-coordinate
+	//gets y-coordinate
 	public int getX()
 	{
 		return positionX;
 	}
 	
-	//gets y-coordinate
+	//gets x-coordinate
 	public int getY()
 	{
 		return positionY;
 	}
 
-
+	//the x and y coordinates are flipped
 }
