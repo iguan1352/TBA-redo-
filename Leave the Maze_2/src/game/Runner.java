@@ -10,14 +10,14 @@ public class Runner {
 	public static void main(String[] args)
 	{
 		Room[][] map = new Room[6][5]; 
-		Player player1 = new Player(3,0);
+		Player player1 = new Player(0,0);
 		
 		for(int i = 0; i < map.length; i++)
 		{
 			Room[] row = map[i];
 			for(int j = 0; j < row.length; j++)
 			{
-					row[j] = new Room(i,j);
+					row[j] = Utilities.randomRoom(i, j);
 			}
 		}
 		
@@ -53,6 +53,7 @@ public class Runner {
 			}
 			if(player1.getX() == 5 && player1.getY() == 4)
 			{
+				mazeMap.printMaze(player1);
 				System.out.println("You have reached the exit! CONGRATULATIONS!!!");
 				gameOn = false;
 			}

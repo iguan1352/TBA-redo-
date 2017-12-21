@@ -1,16 +1,18 @@
 package rooms;
 
-public class Room {
+public abstract class Room {
 
 	public boolean wall;
+	public boolean sinkhole;
 	private int x;
 	private int y;
 	
-	public Room(int x, int y) 
+	public Room(int x, int y, boolean wall, boolean sinkhole) 
 	{
 		this.x = x;
 		this.y = y;
-		this.wall = false;
+		this.wall = wall;
+		this.sinkhole = sinkhole;
 	}
 
 	public int getX()
@@ -23,9 +25,6 @@ public class Room {
 		return y;
 	}
 	
-	public void print()
-	{
-		System.out.print("[   ]");
-	}
-
+	public abstract void print();
+	public abstract String roomId();
 }
