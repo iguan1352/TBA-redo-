@@ -7,11 +7,19 @@ public class Board {
 
 	private Room[][] mazeMap;
 	
+	/*
+	 * the game board constructor
+	 * @param Room[][] mazeMap
+	 */
 	public Board(Room[][] mazeMap)
 	{
 		this.mazeMap = mazeMap;
 	}
 	
+	/*
+	 * prints the game board
+	 * @param the player of the game
+	 */
 	public void printMaze(Player player)
 	{
 		for(int i = 0; i < mazeMap.length; i++) 
@@ -24,7 +32,7 @@ public class Board {
             	}
             	else
             	{
-            		mazeMap[i][j].print(); //the print method is in the Room class
+            		mazeMap[i][j].print(); //the print method is in the Ostacle class
             	}
             }
             System.out.println();

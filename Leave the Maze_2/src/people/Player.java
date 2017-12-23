@@ -1,6 +1,8 @@
 package people;
 
-public class Player {
+import rooms.Obstacle;
+
+public class Player implements Person{
 
 	private  int positionX;
 	private  int positionY;
@@ -38,4 +40,10 @@ public class Player {
 	}
 
 	//the x and y coordinates are flipped
+	
+	public int numMoves() 
+	{
+		int moves = 30 - Obstacle.count;
+		return moves;
+	}
 }

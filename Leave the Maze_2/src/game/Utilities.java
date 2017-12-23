@@ -1,23 +1,23 @@
 package game;
 
-import rooms.Obstacle;
-import rooms.Room;
-
 public class Utilities {
 	public static int x;
 	public static int y;
 	
-	public static Room randomRoom(int x, int y)
+	/*
+	 * randomBoolean chooses true or false randomly and 
+	 * there will be a higher chance in generating a false rather than true
+	 */
+	public static boolean randomBoolean()
 	{
-		int r = (int)(Math.random() * 10);
-		if((r == 1 || r == 3) || r == 5)
+		int r = (int)(Math.random() * 3) +1;
+		if(r == 2)
 		{
-			return new Obstacle(x,y,true,false);
+			return true;
 		}
-		if(r == 7 || r == 9)
+		else
 		{
-			return new Obstacle(x,y,false,true);
+			return false;
 		}
-		return new Obstacle(x,y,false,false);
 	}
 }
